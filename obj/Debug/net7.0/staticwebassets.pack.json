@@ -13,6 +13,34 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\brands\\Bentley.png",
+      "PackagePath": "staticwebassets\\images\\brands\\Bentley.png"
+    },
+    {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\brands\\Bmw.png",
+      "PackagePath": "staticwebassets\\images\\brands\\Bmw.png"
+    },
+    {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\brands\\Mercedes.png",
+      "PackagePath": "staticwebassets\\images\\brands\\Mercedes.png"
+    },
+    {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\brands\\Porsche.png",
+      "PackagePath": "staticwebassets\\images\\brands\\Porsche.png"
+    },
+    {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\mercedes_amg-gt.png",
+      "PackagePath": "staticwebassets\\images\\cars\\mercedes_amg-gt.png"
+    },
+    {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\mercedes_c-class.png",
+      "PackagePath": "staticwebassets\\images\\cars\\mercedes_c-class.png"
+    },
+    {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\porsche_718_cayman.png",
+      "PackagePath": "staticwebassets\\images\\cars\\porsche_718_cayman.png"
+    },
+    {
       "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

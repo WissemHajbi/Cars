@@ -3,16 +3,16 @@ using Cars.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cars.Controllers;
-public class BrandsController : Controller
+public class SalesController : Controller
 {
     private readonly CarsDbContext _context;
-    public BrandsController(CarsDbContext context)
+    public SalesController(CarsDbContext context)
     {
         _context = context;
     }
     public async Task<IActionResult> Index()
     {
-        var brands = await _context.Brands.ToListAsync();
-        return View(brands);
+        var sales = await _context.Sales.ToListAsync();
+        return View();
     }
 }
