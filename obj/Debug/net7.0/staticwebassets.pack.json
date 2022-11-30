@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\brands\\Porsche.png"
     },
     {
+      "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\bmw_m2_cs.png",
+      "PackagePath": "staticwebassets\\images\\cars\\bmw_m2_cs.png"
+    },
+    {
       "Id": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\mercedes_amg-gt.png",
       "PackagePath": "staticwebassets\\images\\cars\\mercedes_amg-gt.png"
     },

@@ -13,6 +13,6 @@ public class SalesController : Controller
     public async Task<IActionResult> Index()
     {
         var sales = await _context.Sales.ToListAsync();
-        return View();
+        return View(sales);
     }
 }
