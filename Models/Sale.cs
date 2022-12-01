@@ -16,6 +16,7 @@ public class Sale
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public CarsCategories Categories { get; set; }
+    public int capacity { get; set; } = 12;
 
     // car
     public int CarId { get; set; }

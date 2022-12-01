@@ -20,7 +20,20 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         var sales = await _context.Sales.ToListAsync();
-        Console.Write(sales[3].Name);
+
+        // Top 3 Sellers
+        List<Sale> MinSales = new List<Sale>();
+        var Nsales = await _context.Sales.ToListAsync();
+
+        for (int i = 0; i < 3; i++)
+        {
+            var MinSale = Nsales.First(x => x.capacity == Nsales.Min(y => y.capacity));
+            MinSales.Add(MinSale);
+            Nsales.Remove(MinSale);
+        }
+
+        ViewData["TopSellers"] = MinSales;
+
         return View(sales);
     }
 

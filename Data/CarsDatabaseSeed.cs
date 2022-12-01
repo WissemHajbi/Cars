@@ -34,6 +34,12 @@ public class CarsDatabasSeed
                         PictureUrl = @"\images\Brands\Bentley.png",
                         Name = "Bentley",
                         Origin = "England",
+                    },
+                    new Brand()
+                    {
+                        PictureUrl = @"\images\Brands\Bmw.png",
+                        Name = "Bmw",
+                        Origin = "German",
                     }
                 });
                 context.SaveChanges();
@@ -49,7 +55,7 @@ public class CarsDatabasSeed
                         PictureUrl = @"\images\Cars\mercedes_c-class.png",
                         Name = "C-class",
                         Bio = "The 2023 Mercedes-Benz C-Class has been completely redesigned, and the result is a true European driving experience with many features that echo those of the formidable Mercedes S-Class.",
-                        BrandId = 0,
+                        BrandId = context.Brands.First(x => x.Name == "Mercedes").Id,
                         brand = context.Brands.First(x => x.Name == "Mercedes"),
                     },
                     new Car()
@@ -57,7 +63,7 @@ public class CarsDatabasSeed
                         PictureUrl =  @"\images\Cars\mercedes_amg-gt.png",
                         Name = "AMG GT",
                         Bio = "The Mercedes-Benz AMG GT is a 5-seater vehicle that comes in 4 trim levels. The most popular style is the AMG GT 63 4-Door Coupe,",
-                        BrandId = 0,
+                        BrandId = context.Brands.First(x => x.Name == "Mercedes").Id,
                         brand = context.Brands.First(x => x.Name == "Mercedes"),
                     },
                     new Car()
@@ -65,8 +71,24 @@ public class CarsDatabasSeed
                         PictureUrl =  @"\images\Cars\porsche_718_cayman.png",
                         Name = "718 CAYMAN",
                         Bio = "Like its cabriolet counterpart, the 718 Boxster, the 718 Cayman coupé is all about pure driving fun mixed with practicality.",
-                        BrandId = 0,
+                        BrandId = context.Brands.First(x => x.Name == "Porsche").Id,
                         brand = context.Brands.First(x => x.Name == "Porsche"),
+                    },
+                    new Car()
+                    {
+                        PictureUrl =  @"\images\Cars\bentley_Continental_GT.png",
+                        Name = "Continental GT",
+                        Bio = "But as is the trend with BMW M, the M2 needed time to mature, to develop and to grow ever more extreme. The broad recipe was very similar to the 1M but with more budget and more muscle. The CS is the logical extreme: carbon bodywork, an M4 engine at full muscle (444PS, 331kW).",
+                        BrandId = context.Brands.First(x => x.Name == "Bmw").Id,
+                        brand = context.Brands.First(x => x.Name == "Bmw"),
+                    },
+                    new Car()
+                    {
+                        PictureUrl =  @"\images\Cars\bentley_Continental GT.png",
+                        Name = "Continental GT",
+                        Bio = "Choose a Continental GT with either a V8 or W12 engine and you are guaranteed no less than 542 hp, with the W12 option offering a staggering 650 hp. Besides this, you will ride in one of the world's most amazing grand tourers and the crème of its class.",
+                        BrandId = context.Brands.First(x => x.Name == "Bentley").Id,
+                        brand = context.Brands.First(x => x.Name == "Bentley"),
                     }
                 });
                 context.SaveChanges();
@@ -89,6 +111,7 @@ public class CarsDatabasSeed
                         Categories = CarsCategories.SportsCar,
                         CarId = 0,
                         car = context.Cars.First(x => x.Name == "C-class"),
+                        capacity = 12
                     },
                     new Sale()
                     {
@@ -102,6 +125,7 @@ public class CarsDatabasSeed
                         Categories = CarsCategories.Truck,
                         CarId = 1,
                         car = context.Cars.First(x => x.Name == "AMG GT"),
+                        capacity = 12
                     },
                     new Sale()
                     {
@@ -115,6 +139,7 @@ public class CarsDatabasSeed
                         Categories = CarsCategories.Truck,
                         CarId = 2,
                         car = context.Cars.First(x => x.Name == "718 CAYMAN"),
+                        capacity = 12
                     }
                 });
                 context.SaveChanges();

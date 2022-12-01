@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Home Page";
-}
+}   
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -10,46 +10,64 @@
 
 
 <div class="container">
-    <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="p-4">
+        <h1 class="nbtext text-success p-2 d-flex justify-content-center">TOP Sellers</h1>
+        <div class="row row-cols-3">
+            @foreach (var sale in ViewData["TopSellers"] as List<Sale>)
+            {
+                <div class="col d-flex justify-content-center">
+                    <div class="card shadow-lg mb-5 rounded" style="width:21rem">
+                        <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;" />
+                        <div class="card-body">
+                            <p class="card-text nbtext">@sale.Name</p>
+                            <hr>
+                            <samp>
+                            <p class="card-text SaleDisc" style="font-size:14px;height:55px">@sale.Description
+                            </p>
+                            <p class="card-text">@sale.Price$</p>
+                            </samp>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 
+
+    @* carousel of cars in sales *@
+    <h1 class="nbtext p-4 d-flex justify-content-center fs-1">Cataloge</h1>
+    <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
             @foreach (var sale in Model)
             {
-                @if (Model.IndexOf(sale) == 0)
-                {
-                    @:<div class="carousel-item active">
-                    @:<div class="row">
-                }
-                else
-                {
-                    @:<div class="carousel-item">
-                    @:<div class="row">
-                }
-                                <div class="col justify-content-center">
-                                    <div class="card shadow-lg mb-5 rounded" style="width:90%">
-                                        <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:220px" />
-                                        <div class="card-body">
-                                            <p class="card-text nbtext">@sale.Name</p>
-                                            <hr>
-                                            <samp>
-                                                <p class="card-text SaleDisc" style="font-size:14px">@sale.Description</p>
-                                                <p class="card-text">@sale.Price$</p>
-                                            </samp>
-                                            <hr>
-                                        </div>
+                    @if (Model.IndexOf(sale) == 0)
+                    {
+                        @:<div class="carousel-item active">
+                    }else{
+                        @:<div class="carousel-item">
+                    }
+                            <div style="margin-left:15%;margin-right:15%">
+                                <div class="card shadow-lg mb-4 rounded " >
+                                    <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px" />
+                                    <div class="card-body">
+                                        <hr class="border border-dark border-2 opacity-75">
+                                        <p class="card-text nbtext d-flex justify-content-center">@sale.Name</p>
                                     </div>
                                 </div>
+                            </div>
+                        @:</div>
             }
-                        </div>
-                        <button class="carousel-control-prev" style="width:50px;" type="button"
-                            data-bs-target="#carouselControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" style="width:50px;" type="button"
-                            data-bs-target="#carouselControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
+        </div>
+        <button class="carousel-control-prev" style="width:50px;" type="button" data-bs-target="#carouselControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" style="width:50px;" type="button" data-bs-target="#carouselControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

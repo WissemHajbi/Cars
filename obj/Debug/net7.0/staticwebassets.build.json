@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Dg0iOsKgMt6KD+NcUF/Iv2CNwaqN8XbH/TKXEm0OSo0=",
+  "Hash": "JdXZCDnGSKb9BtKzWGd1UA/nxLZTKctlBEDVLvgjO4I=",
   "Source": "Cars",
   "BasePath": "_content/Cars",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\brands\\Porsche.png"
+    },
+    {
+      "Identity": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\bentley_Continental_GT.png",
+      "SourceId": "Cars",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\",
+      "BasePath": "_content/Cars",
+      "RelativePath": "images/cars/bentley_Continental_GT.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cars\\bentley_Continental_GT.png"
     },
     {
       "Identity": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\wwwroot\\images\\cars\\bmw_m2_cs.png",
