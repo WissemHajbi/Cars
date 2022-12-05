@@ -19,7 +19,12 @@
                     <div class="card shadow-lg mb-5 rounded" style="width:21rem">
                         <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;" />
                         <div class="card-body">
-                            <p class="card-text nbtext">@sale.Name</p>
+                            <div class="row row-cols-2">
+                                <p class="card-text nbtext">@sale.Name</p>
+                                <div class="col">
+                                    <img src="@sale.car.brand.PictureUrl" class="float-end" style="height:20%px;width:20%;" />
+                                </div>
+                            </div>
                             <hr>
                             <samp>
                             <p class="card-text SaleDisc" style="font-size:14px;height:55px">@sale.Description

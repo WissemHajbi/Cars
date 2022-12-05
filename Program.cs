@@ -1,4 +1,5 @@
 using Cars.Data;
+using Cars.Data.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<CarsDbContext>(options =>
         options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddScoped<IBrandsService, BrandsService>();
+builder.Services.AddScoped<ISalesService, SalesService>();
 var app = builder.Build();
 
 

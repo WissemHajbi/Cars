@@ -1,18 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Cars.Data;
 using Microsoft.EntityFrameworkCore;
+using Cars.Data.Services;
 
 namespace Cars.Controllers;
 public class BrandsController : Controller
 {
-    private readonly CarsDbContext _context;
-    public BrandsController(CarsDbContext context)
+    private readonly IBrandsService _service;
+    public BrandsController(IBrandsService service)
     {
-        _context = context;
+        _service = service;
     }
     public async Task<IActionResult> Index()
     {
-        var brands = await _context.Brands.ToListAsync();
+        var brands = await _service.GetAll();
         return View(brands);
     }
 }

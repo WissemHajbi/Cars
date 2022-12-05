@@ -1,41 +1,35 @@
 using Microsoft.AspNetCore.Mvc;
 using Cars.Data;
 using Microsoft.EntityFrameworkCore;
+using Cars.Models;
+using Cars.Data.Services;
 
 namespace Cars.Controllers;
 public class SalesController : Controller
 {
-    private readonly CarsDbContext _context;
-    public SalesController(CarsDbContext context)
+    private CarsDbContext _c;
+    private readonly ISalesService _service;
+    public SalesController(ISalesService service, CarsDbContext c)
     {
-        _context = context;
+        _c = c;
+        _service = service;
     }
     public async Task<IActionResult> Index()
     {
-        // All Sales
-        var sales = await _context.Sales.ToListAsync();
+        var sales = await _service.GetAll();
 
-        // Top Sellers
-        List<int> Allids = new List<int>();
-        List<int> Minids = new List<int>();
-
-        foreach (var sale in sales)
-        {
-            Allids.Add(sale.Id);
-        }
+        // Top 3 Sellers
+        List<Sale> MinSales = new List<Sale>();
+        var Nsales = _service.GetAllClean();
 
         for (int i = 0; i < 3; i++)
         {
-            int id = Allids.Min();
-            Minids.Add(id);
-            Allids.Remove(id);
+            var MinSale = Nsales.First(x => x.capacity == Nsales.Min(y => y.capacity));
+            MinSales.Add(MinSale);
+            Nsales.Remove(MinSale);
         }
 
-        Console.WriteLine(Minids);
-        Console.WriteLine("aaaaaaa");
-
-
-        ViewData["TopSellersId"] = Minids;
+        ViewData["TopSellers"] = MinSales;
 
         return View(sales);
     }
