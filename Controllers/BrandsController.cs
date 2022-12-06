@@ -16,4 +16,12 @@ public class BrandsController : Controller
         var brands = await _service.GetAll();
         return View(brands);
     }
+
+    public async Task<IActionResult> Details(int id)
+    {
+        var brand = await _service.GetById(id);
+
+        if (brand == null) return View("Empty");
+        return View(brand);
+    }
 }

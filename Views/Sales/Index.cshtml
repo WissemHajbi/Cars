@@ -11,8 +11,19 @@
 
 <div class="container">
     <div class="p-4">
-        <h1 class="nbtext text-success p-2 d-flex justify-content-center">TOP Sellers</h1>
-        <div class="row row-cols-3">
+        <h1 class="nbtext text-success p-2 d-flex justify-content-center ml12">
+            <span class="lettre">T</span>
+            <span class="lettre">o</span>
+            <span class="lettre">p</span>
+            <span class="lettre">S</span>
+            <span class="lettre">e</span>
+            <span class="lettre">l</span>
+            <span class="lettre">l</span>
+            <span class="lettre">e</span>
+            <span class="lettre">r</span>
+            <span class="lettre">s</span>
+        </h1>
+        <div class="row row-cols-3 mt-4">
             @foreach (var sale in ViewData["TopSellers"] as List<Sale>)
             {
                 <div class="col d-flex justify-content-center">
@@ -22,7 +33,7 @@
                             <div class="row row-cols-2">
                                 <p class="card-text nbtext">@sale.Name</p>
                                 <div class="col">
-                                    <img src="@sale.car.brand.PictureUrl" class="float-end" style="height:20%px;width:20%;" />
+                                    <img src="@sale.car.brand.PictureUrl" class="float-end" style="height:30%px;width:30%;" />
                                 </div>
                             </div>
                             <hr>
@@ -41,7 +52,7 @@
 
 
     @* carousel of cars in sales *@
-    <h1 class="nbtext p-4 d-flex justify-content-center fs-1">Cataloge</h1>
+    <h1 class="nbtext p-4 d-flex justify-content-center text-secondary fs-3 ml12">Cataloge</h1>
     <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
             @foreach (var sale in Model)

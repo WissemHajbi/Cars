@@ -33,3 +33,14 @@ body {
   font-family: 'lobster', cursive;
   font-size: 22px;
 }
+
+.ml12 {
+  font-weight: 800;
+  text-transform: uppecase;
+  letter-spacing: 0.2em;
+}
+
+.ml12 .lettre {
+  display: inline-block;
+  line-height: 1em;
+}

@@ -12,29 +12,14 @@ public class BrandsService : IBrandsService
         _context = context;
     }
 
-    public void Add(Brand brand)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Delete(int id)
-    {
-        throw new NotImplementedException();
-    }
-
     public async Task<IEnumerable<Brand>> GetAll()
     {
         var Brands = await _context.Brands.ToListAsync();
         return Brands;
     }
 
-    public Brand GetById()
+    public async Task<Brand> GetById(int id)
     {
-        throw new NotImplementedException();
-    }
-
-    public Brand Update(int id, Brand brand)
-    {
-        throw new NotImplementedException();
+        return await _context.Brands.FirstOrDefaultAsync(x => x.Id == id);
     }
 }

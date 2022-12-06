@@ -1,0 +1,26 @@
+@model Brand
+
+@{
+    ViewData["Title"] = "Brands";
+}
+
+<div class="container">
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width:100%">
+        <div class="row d-flex justify-content-center mb-5">
+            <img src="@Model.PictureUrl" class="card-img-top" style="height:20rem;width:25rem;margin-top:50px">
+        </div>
+        <div class="card-body d-flex justifiy-content-center p-3 mt-3">
+            <div class="shadow-lg p-3 me-4 bg-body rounded">
+                <p class="card-text nbtext"> Name : @Model.Name</p>
+            </div>
+            <div class="shadow-lg p-3 me-4 bg-body rounded">
+                <p class="card-text nbtext"> Origin : @Model.Origin</p>
+            </div>
+
+            @* to add list of cars here *@
+
+            @* to add a biography of the brand *@
+
+        </div>
+    </div>
+</div>

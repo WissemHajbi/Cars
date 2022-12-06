@@ -5,17 +5,15 @@
 }
 
 <div class="container">
-    <div class="row row-cols-3">
+    <div class="row row-cols-4">
         @for (int i = 0; i < Model.Count; i++)
         {
             <div class="col justify-content-center">
-                <div class="card shadow-lg mb-5 rounded" style="width:18rem">
-                    <img src="@Model[i].PictureUrl" class="card-img-top" style="height:280px;" />
-                    <div class="card-body">
-                        <p class="card-text">@Model[i].Name</p>
-                        <p class="card-text">@Model[i].Origin</p>
+                <a asp-controller="Brands" asp-action="Details" asp-route-id="@Model[i].Id">
+                    <div class="card shadow-lg mb-5 rounded" style="width:18rem">
+                        <img src="@Model[i].PictureUrl" class="card-img-top p-4" style="height:280px;" />
                     </div>
-                </div>
+                </a>
             </div>
         }
     </div>
