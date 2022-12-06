@@ -33,4 +33,12 @@ public class SalesController : Controller
 
         return View(sales);
     }
+
+    public async Task<IActionResult> Details(int id)
+    {
+        var Sale = await _service.GetById(id);
+
+        if (Sale == null) return View("Empty");
+        return View(Sale);
+    }
 }

@@ -1,7 +1,7 @@
 @model Brand
 
 @{
-    ViewData["Title"] = "Brands";
+    ViewData["Title"] = "Brand";
 }
 
 <div class="container">
@@ -11,10 +11,10 @@
         </div>
         <div class="card-body d-flex justifiy-content-center p-3 mt-3">
             <div class="shadow-lg p-3 me-4 bg-body rounded">
-                <p class="card-text nbtext"> Name : @Model.Name</p>
+                <p class="card-text"><span class="nbtext">Name: </span>@Model.Name</p>
             </div>
             <div class="shadow-lg p-3 me-4 bg-body rounded">
-                <p class="card-text nbtext"> Origin : @Model.Origin</p>
+                <p class="card-text"><span class="nbtext">Origin: </span>@Model.Origin</p>
             </div>
 
             @* to add list of cars here *@

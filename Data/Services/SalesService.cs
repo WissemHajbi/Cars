@@ -23,4 +23,10 @@ public class SalesService : ISalesService
         var sales = _context.Sales.ToList();
         return sales;
     }
+
+    public async Task<Sale> GetById(int id)
+    {
+        return await _context.Sales.FirstOrDefaultAsync(x => x.Id == id);
+    }
+
 }

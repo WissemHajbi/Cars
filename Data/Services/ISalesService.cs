@@ -6,4 +6,5 @@ public interface ISalesService
 {
     Task<IEnumerable<Sale>> GetAll();
     List<Sale> GetAllClean();
+    Task<Sale> GetById(int id);
 }

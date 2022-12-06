@@ -27,24 +27,26 @@
             @foreach (var sale in ViewData["TopSellers"] as List<Sale>)
             {
                 <div class="col d-flex justify-content-center">
-                    <div class="card shadow-lg mb-5 rounded" style="width:21rem">
-                        <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;" />
-                        <div class="card-body">
-                            <div class="row row-cols-2">
-                                <p class="card-text nbtext">@sale.Name</p>
-                                <div class="col">
-                                    <img src="@sale.car.brand.PictureUrl" class="float-end" style="height:30%px;width:30%;" />
+                    <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id">
+                        <div class="card shadow-lg mb-5 rounded" style="width:21rem">
+                            <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;" />
+                            <div class="card-body">
+                                <div class="row row-cols-2">
+                                    <p class="card-text nbtext">@sale.Name</p>
+                                    <div class="col">
+                                        <img src="@sale.car.brand.PictureUrl" class="float-end" style="height:30%px;width:30%;" />
+                                    </div>
                                 </div>
+                                <hr>
+                                <samp>
+                                <p class="card-text SaleDisc" style="font-size:14px;height:55px">@sale.Description
+                                </p>
+                                <p class="card-text">@sale.Price$</p>
+                                </samp>
+                                <hr>
                             </div>
-                            <hr>
-                            <samp>
-                            <p class="card-text SaleDisc" style="font-size:14px;height:55px">@sale.Description
-                            </p>
-                            <p class="card-text">@sale.Price$</p>
-                            </samp>
-                            <hr>
                         </div>
-                    </div>
+                    </a>
                 </div>
             }
         </div>
@@ -55,25 +57,27 @@
     <h1 class="nbtext p-4 d-flex justify-content-center text-secondary fs-3 ml12">Cataloge</h1>
     <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
-            @foreach (var sale in Model)
-            {
-                    @if (Model.IndexOf(sale) == 0)
-                    {
-                        @:<div class="carousel-item active">
-                    }else{
-                        @:<div class="carousel-item">
-                    }
-                            <div style="margin-left:15%;margin-right:15%">
-                                <div class="card shadow-lg mb-4 rounded " >
-                                    <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px" />
-                                    <div class="card-body">
-                                        <hr class="border border-dark border-2 opacity-75">
-                                        <p class="card-text nbtext d-flex justify-content-center">@sale.Name</p>
+                @foreach (var sale in Model)
+                {
+                        @if (Model.IndexOf(sale) == 0)
+                        {
+                            @:<div class="carousel-item active">
+                        }else{
+                            @:<div class="carousel-item">
+                        }
+                        <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id">
+                                <div style="margin-left:15%;margin-right:15%">
+                                    <div class="card shadow-lg mb-4 rounded " >
+                                        <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px" />
+                                        <div class="card-body">
+                                            <hr class="border border-dark border-2 opacity-75">
+                                            <p class="card-text nbtext d-flex justify-content-center">@sale.Name</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @:</div>
-            }
+                        </a>
+                            @:</div>
+                }
         </div>
         <button class="carousel-control-prev" style="width:50px;" type="button" data-bs-target="#carouselControls"
             data-bs-slide="prev">
