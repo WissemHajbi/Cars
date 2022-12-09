@@ -1,0 +1,64 @@
+@model Sale
+
+@{
+    ViewData["Title"] = "Update actor";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+        <h1>Update Sale</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Edit" method="POST">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group text-center">
+                        <img src="@Model.ImageUrl" class="border-info rounded-circle" style="max-width: 150px" />
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="ImageUrl" class="control-label text-secondary m-2"></label>
+                        <input asp-for="ImageUrl" class="form-control" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="Name" class="control-label text-secondary m-2"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="Description" class="control-label text-secondary m-2"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="Price" class="control-label text-secondary m-2"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="capacity" class="control-label text-secondary m-2"></label>
+                        <input asp-for="capacity" class="form-control" />
+                        <span asp-validation-for="capacity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label asp-for="EndDate" class="control-label text-secondary m-2"></label>
+                        <input asp-for="EndDate" class="form-control" />
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label asp-for="CarId" class="control-label text-secondary m-2"></label>
+                        <input asp-for="CarId" class="form-control" />
+                        <span asp-validation-for="CarId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-outline-success" />
+                        <a class="btn btn-outline-secondary m-2" asp-action="Index">Show All</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

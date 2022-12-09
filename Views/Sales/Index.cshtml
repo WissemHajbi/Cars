@@ -65,17 +65,17 @@
                         }else{
                             @:<div class="carousel-item">
                         }
-                        <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id">
-                                <div style="margin-left:15%;margin-right:15%">
-                                    <div class="card shadow-lg mb-4 rounded " >
-                                        <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px" />
-                                        <div class="card-body">
-                                            <hr class="border border-dark border-2 opacity-75">
-                                            <p class="card-text nbtext d-flex justify-content-center">@sale.Name</p>
+                                <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id">
+                                    <div style="margin-left:15%;margin-right:15%">
+                                        <div class="card shadow-lg mb-4 rounded " >
+                                            <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px" />
+                                            <div class="card-body">
+                                                <hr class="border border-dark border-2 opacity-75">
+                                                <p class="card-text nbtext d-flex justify-content-center">@sale.Name</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                        </a>
+                                </a>
                             @:</div>
                 }
         </div>

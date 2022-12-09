@@ -29,4 +29,11 @@ public class SalesService : ISalesService
         return await _context.Sales.FirstOrDefaultAsync(x => x.Id == id);
     }
 
+    public async Task<Sale> EditAsync(int id, Sale newsale)
+    {
+        _context.Update(newsale);
+        await _context.SaveChangesAsync();
+        return newsale;
+    }
+
 }
