@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nj69wS7uxYxsl4kU6L0lIEdbJEsCf5EzBcEiR2vbuwf8RCk+VDtEBOHxLXTdhUKIkWo4FrmSNmA4aWj/LWm21g==",
+  "dgSpecHash": "RUf65QmIbNTQX/k4wovp7cUtYJPMfn33ZNjhVZ0OPvWX46TuXJG7U8mmXsZEXORxY4gctE51LAfIoHRBpkjsiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars.csproj",
+  "projectFilePath": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars\\Cars.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wisse\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\wisse\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",

@@ -1304,11 +1304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars.csproj",
+      "projectUniqueName": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars\\Cars.csproj",
       "projectName": "Cars",
-      "projectPath": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars.csproj",
+      "projectPath": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars\\Cars.csproj",
       "packagesPath": "C:\\Users\\wisse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\obj\\",
+      "outputPath": "C:\\Users\\wisse\\projects\\asp.netWebsites\\Cars\\Cars\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wisse\\AppData\\Roaming\\NuGet\\NuGet.Config",
