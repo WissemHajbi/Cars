@@ -11,15 +11,15 @@
         </p>
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Edit" method="POST">
+                <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <div class="form-group text-center">
                         <img src="@Model.ImageUrl" class="border-info rounded-circle" style="max-width: 150px" />
                     </div>
-                    <div class="form-group mb-4">
+                    <div class="form-group mb-4" hidden>
                         <label asp-for="CarId" class="control-label text-secondary m-2"></label>
-                        <input asp-for="CarId" class="form-control" disabled />
+                        <input asp-for="CarId" class="form-control" />
                         <span asp-validation-for="CarId" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-2">
