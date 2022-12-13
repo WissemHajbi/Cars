@@ -51,7 +51,7 @@ public class SalesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageUrl,Name,Description,Price,capacity,EndDate")] Sale sale)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageUrl,Name,Description,Price,capacity,EndDate,CarId")] Sale sale)
     {
         if (ModelState.IsValid)
         {

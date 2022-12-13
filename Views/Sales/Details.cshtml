@@ -7,8 +7,8 @@
 <div class="container">
 
     <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width:100%">
-        <a asp-controller="Sales" asp-action="Edit" asp-route-id="@Model.Id">
-            <i class="bi bi-pencil-square"></i>
+        <a asp-controller="Sales" asp-action="Edit" asp-route-id="@Model.Id" class="d-flex justify-content-end">
+            <i class="bi bi-pencil-square fs-3 text-dark float-right"></i>
         </a>
         <div class="row d-flex justify-content-center mb-5">
             <img src="@Model.ImageUrl" class="card-img-top" style="height:20rem;width:25rem;margin-top:50px">

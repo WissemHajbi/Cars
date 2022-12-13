@@ -17,10 +17,10 @@
                     <div class="form-group text-center">
                         <img src="@Model.ImageUrl" class="border-info rounded-circle" style="max-width: 150px" />
                     </div>
-                    <div class="form-group mb-2">
-                        <label asp-for="ImageUrl" class="control-label text-secondary m-2"></label>
-                        <input asp-for="ImageUrl" class="form-control" />
-                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <div class="form-group mb-4">
+                        <label asp-for="CarId" class="control-label text-secondary m-2"></label>
+                        <input asp-for="CarId" class="form-control" disabled />
+                        <span asp-validation-for="CarId" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-2">
                         <label asp-for="Name" class="control-label text-secondary m-2"></label>
@@ -37,20 +37,20 @@
                         <input asp-for="Price" class="form-control" />
                         <span asp-validation-for="Price" class="text-danger"></span>
                     </div>
-                    <div class="form-group mb-2">
-                        <label asp-for="capacity" class="control-label text-secondary m-2"></label>
-                        <input asp-for="capacity" class="form-control" />
-                        <span asp-validation-for="capacity" class="text-danger"></span>
-                    </div>
                     <div class="form-group mb-4">
                         <label asp-for="EndDate" class="control-label text-secondary m-2"></label>
                         <input asp-for="EndDate" class="form-control" />
                         <span asp-validation-for="EndDate" class="text-danger"></span>
                     </div>
-                    <div class="form-group mb-4">
-                        <label asp-for="CarId" class="control-label text-secondary m-2"></label>
-                        <input asp-for="CarId" class="form-control" />
-                        <span asp-validation-for="CarId" class="text-danger"></span>
+                    <div class="form-group mb-2">
+                        <label asp-for="ImageUrl" class="control-label text-secondary m-2"></label>
+                        <input asp-for="ImageUrl" class="form-control" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="capacity" class="control-label text-secondary m-2"></label>
+                        <input asp-for="capacity" class="form-control mb-3" />
+                        <span asp-validation-for="capacity" class="text-danger "></span>
                     </div>
 
                     <div class="form-group">
