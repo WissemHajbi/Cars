@@ -27,12 +27,17 @@
             @foreach (var sale in ViewData["TopSellers"] as List<Sale>)
             {
                 <div class="col d-flex justify-content-center">
-                    <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id">
                         <div class="card shadow-lg mb-5 rounded" style="width:21rem">
-                            <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;" />
+                    <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id" class="text-decoration-none">
+                            <div class="row d-flex justify-content-center">
+                                <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;width:90%" />
+                            </div>
+                    </a>
                             <div class="card-body">
                                 <div class="row row-cols-2">
-                                    <p class="card-text nbtext">@sale.Name</p>
+                                      <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id" class="text-decoration-none">
+                                        <p class="card-text nbtext text-dark">@sale.Name</p>
+                                      </a>
                                     <div class="col">
                                         <img src="@sale.car.brand.PictureUrl" class="float-end" style="height:30%px;width:30%;" />
                                     </div>
@@ -46,7 +51,6 @@
                                 <hr>
                             </div>
                         </div>
-                    </a>
                 </div>
             }
         </div>
@@ -65,17 +69,18 @@
                         }else{
                             @:<div class="carousel-item">
                         }
-                        <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id">
-                                <div style="margin-left:15%;margin-right:15%">
-                                    <div class="card shadow-lg mb-4 rounded " >
-                                        <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px" />
-                                        <div class="card-body">
-                                            <hr class="border border-dark border-2 opacity-75">
-                                            <p class="card-text nbtext d-flex justify-content-center">@sale.Name</p>
+                                <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id" class="text-decoration-none">
+                                    <div style="margin-left:15%;margin-right:15%">
+                                        <div class="card shadow-lg mb-4 rounded " >
+                                            <div class="row d-flex justify-content-center">
+                                                <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px;width:65%" />
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text nbtext p-3 d-flex justify-content-center text-dark ">@sale.Name</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                        </a>
+                                </a>
                             @:</div>
                 }
         </div>

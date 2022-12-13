@@ -20,6 +20,5 @@ public class Sale
 
     // car
     public int CarId { get; set; }
-    [ForeignKey("CarId")]
     public Car car { get; set; }
 }

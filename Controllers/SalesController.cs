@@ -41,4 +41,23 @@ public class SalesController : Controller
         if (Sale == null) return View("Empty");
         return View(Sale);
     }
+
+    public async Task<IActionResult> Edit(int id)
+    {
+        var Sale = await _service.GetById(id);
+
+        if (Sale == null) return View("Empty");
+        return View(Sale);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageUrl,Name,Description,Price,capacity,EndDate,CarId")] Sale sale)
+    {
+        if (ModelState.IsValid)
+        {
+            return View(sale);
+        }
+        await _service.EditAsync(id, sale);
+        return RedirectToAction(nameof(Index));
+    }
 }
