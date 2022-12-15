@@ -1,4 +1,5 @@
 using Cars.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cars.Data.Services;
@@ -34,6 +35,16 @@ public class SalesService : ISalesService
         _context.Update(newsale);
         await _context.SaveChangesAsync();
         return newsale;
+    }
+
+    public async void AddAsync(Sale newsale)
+    {
+        newsale.StartDate = DateTime.Today;
+        newsale.EndDate = DateTime.Today.AddDays(30);
+        newsale.capacity = 12;
+
+        await _context.Sales.AddAsync(newsale);
+        await _context.SaveChangesAsync();
     }
 
 }

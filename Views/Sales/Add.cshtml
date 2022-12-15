@@ -1,28 +1,19 @@
 @model Sale
 
 @{
-    ViewData["Title"] = "Update Sale";
+    ViewData["Title"] = "ADD Sale";
 }
 
 <div class="row text">
     <div class="col-md-8 offset-2">
-        <p>
         <div class="d-flex justify-content-center text-secondary">
-            <h1>EDIT</h1>
+            <h1>ADD</h1>
         </div>
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Edit">
+                <form asp-action="Add">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <div class="form-group text-center">
-                        <img src="@Model.ImageUrl" class="border-info rounded-circle" style="max-width: 150px" />
-                    </div>
-                    <div class="form-group mb-4" hidden>
-                        <label asp-for="CarId" class="control-label text-secondary m-2"></label>
-                        <input asp-for="CarId" class="form-control" />
-                        <span asp-validation-for="CarId" class="text-danger"></span>
-                    </div>
                     <div class="form-group mb-2">
                         <label asp-for="Name" class="control-label text-secondary m-2"></label>
                         <input asp-for="Name" class="form-control" />
@@ -39,9 +30,9 @@
                         <span asp-validation-for="Price" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-4">
-                        <label asp-for="EndDate" class="control-label text-secondary m-2"></label>
-                        <input asp-for="EndDate" class="form-control" />
-                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                        <label asp-for="Distance" class="control-label text-secondary m-2"></label>
+                        <input asp-for="Distance" class="form-control" />
+                        <span asp-validation-for="Distance" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-2">
                         <label asp-for="ImageUrl" class="control-label text-secondary m-2"></label>
@@ -49,13 +40,18 @@
                         <span asp-validation-for="ImageUrl" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-2">
-                        <label asp-for="capacity" class="control-label text-secondary m-2"></label>
-                        <input asp-for="capacity" class="form-control mb-3" />
-                        <span asp-validation-for="capacity" class="text-danger "></span>
+                        <label asp-for="Categories" class="control-label text-secondary m-2"></label>
+                        <input asp-for="Categories" class="form-control mb-3" />
+                        <span asp-validation-for="Categories" class="text-danger "></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label asp-for="CarId" class="control-label text-secondary m-2"></label>
+                        <input asp-for="CarId" class="form-control mb-3" />
+                        <span asp-validation-for="CarId" class="text-danger "></span>
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" value="Update" class="btn btn-outline-success" />
+                        <input type="submit" value="Add" class="btn btn-outline-success" />
                         <a class="btn btn-outline-secondary m-2" asp-action="Index">Show All</a>
                     </div>
                 </form>

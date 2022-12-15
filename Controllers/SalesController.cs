@@ -53,11 +53,28 @@ public class SalesController : Controller
     [HttpPost]
     public async Task<IActionResult> Edit(int id, Sale sale)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
             return View(sale);
         }
         await _service.EditAsync(id, sale);
+        return RedirectToAction(nameof(Index));
+    }
+
+    public IActionResult Add()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Add([Bind("Name,Description,Price,Distance,ImageUrl,Categories,CarId")] Sale newsale)
+    {
+
+        if (!ModelState.IsValid)
+        {
+            return View(newsale);
+        }
+        _service.AddAsync(newsale);
         return RedirectToAction(nameof(Index));
     }
 }
