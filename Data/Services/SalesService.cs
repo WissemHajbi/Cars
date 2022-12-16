@@ -47,4 +47,10 @@ public class SalesService : ISalesService
         await _context.SaveChangesAsync();
     }
 
+    public async Task DeleteAsync(int Id)
+    {
+        _context.Sales.Remove(await _context.Sales.FirstOrDefaultAsync(x => x.Id == Id));
+        await _context.SaveChangesAsync();
+    }
+
 }

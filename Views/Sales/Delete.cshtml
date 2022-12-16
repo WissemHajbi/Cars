@@ -1,0 +1,19 @@
+@model Sale
+
+@{
+    ViewData["Title"] = "Delete Sale";
+}
+
+<div class="container">
+
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width:100%">
+        <div class="row d-flex justify-content-center mb-5">
+            <img src="@Model.ImageUrl" class="card-img-top" style="height:20rem;width:25rem;margin-top:50px">
+        </div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input class="btn btn-outline-denger m-2" value="Confirm Delete" type="submit" asp-route-Id="@Model.Id" />
+        </form>
+    </div>
+</div>
+</div>

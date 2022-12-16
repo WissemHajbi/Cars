@@ -10,5 +10,6 @@ public interface ISalesService
     Task<Sale> GetById(int id);
     Task<Sale> EditAsync(int id, Sale newsale);
     void AddAsync(Sale newsale);
+    Task DeleteAsync(int Id);
 }
 

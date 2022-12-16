@@ -31,6 +31,9 @@
             {
                 <div class="col d-flex justify-content-center">
                         <div class="card shadow-lg mb-5 rounded" style="width:21rem">
+                    <a asp-controller="Sales" asp-action="Delete" asp-route-id="@sale.Id" class="text-decoration-none">
+                                <i class="bi bi-trash-fill fs-5 text-dark deleteIcon d-grid justify-content-end p-2"></i>
+                    </a>
                     <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id" class="text-decoration-none">
                             <div class="row d-flex justify-content-center">
                                 <img src="@sale.ImageUrl" class="card-img-top" style="height:280px;width:90%" />
@@ -75,6 +78,9 @@
                                 <a asp-controller="Sales" asp-action="Details" asp-route-id="@sale.Id" class="text-decoration-none">
                                     <div style="margin-left:15%;margin-right:15%">
                                         <div class="card shadow-lg mb-4 rounded " >
+                                            <a asp-controller="Sales" asp-action="Delete" asp-route-id="@sale.Id" class="text-decoration-none">
+                                                  <i class="bi bi-trash-fill fs-5 text-dark deleteIcon d-grid justify-content-end p-2"></i>
+                                            </a>
                                             <div class="row d-flex justify-content-center">
                                                 <img src="@sale.ImageUrl" class="card-img-top p-2" style="height:320px;width:65%" />
                                             </div>

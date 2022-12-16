@@ -44,3 +44,11 @@ body {
   display: inline-block;
   line-height: 1em;
 }
+
+.deleteIcon {
+  opacity: 0;
+}
+
+.deleteIcon:hover {
+  opacity: 1;
+}

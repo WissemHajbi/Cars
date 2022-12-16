@@ -70,11 +70,26 @@ public class SalesController : Controller
     public async Task<IActionResult> Add([Bind("Name,Description,Price,Distance,ImageUrl,Categories,CarId")] Sale newsale)
     {
 
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             return View(newsale);
         }
         _service.AddAsync(newsale);
+        return RedirectToAction(nameof(Index));
+    }
+
+    public async Task<IActionResult> Delete(int Id)
+    {
+        var Sale = await _service.GetById(Id);
+
+        if (Sale == null) return View("Empty");
+        return View(Sale);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public async Task<IActionResult> DeleteConfirmed(int Id)
+    {
+        await _service.DeleteAsync(Id);
         return RedirectToAction(nameof(Index));
     }
 }
